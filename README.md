@@ -1,5 +1,5 @@
 # Spinal-Endoscopic-Ultrasonic-Imaging-System-with-Automated-Tissue-Recognition-Algorithm
-Official PyTorch implementation for paper: **Spinal Endoscopic Ultrasonic Imaging System with Automated Tissue Recognition Algorithm: Development and Optimization**
+Official PyTorch implementation for paper: ***Spinal Endoscopic Ultrasonic Imaging System with Automated Tissue Recognition Algorithm: Development and Optimization***
 
 Follow the steps below to reproduce our result.
 ## Step 1: Setup
@@ -9,8 +9,8 @@ conda create --name bmu --file requirements.txt
 conda activate bmu
 ```
 ## Step 2: Preparing Dataset and Checkpoints
-Prepare the dataset (BaiduDisk) and the Checkpoints (BaiduDisk). Put the WHOLE dataset/checkpoints folder into your working directory.  
-Then go into `config.py`, change `imagesTr` and `model_path` to the path of dataset/checkpoints on your computer.  
+1. Download the dataset and the Checkpoints ([BaiduDisk](https://pan.baidu.com/s/1_DyzJzcJ7ASiZIz0n1WvlQ?pwd=h4r8), Password: h4r8).
+2. Unzip `datasets.zip` and put the WHOLE dataset/checkpoints folder into your working directory.
 Make sure your folder looks like:
 ```
 WorkingDirection/
@@ -31,6 +31,8 @@ WorkingDirection/
 ├────trainer.py
 └────utils.py
 ```
+3. Go into `config.py`, change `imagesTr` and `model_path` to the path of dataset/checkpoints on your computer.  
+
 ## Step 3: Inference
 Using the checkpoints we provided to reproduce our result. Run the command:
 ```
@@ -55,3 +57,5 @@ Then run the inference:
 ```
 python inference.py --gpu 0 --stage 2 
 ```
+## Contact to us
+If you have any problem/bug to this repository, please send an issue or e-mail us: xiangyw99@outlook.com.
