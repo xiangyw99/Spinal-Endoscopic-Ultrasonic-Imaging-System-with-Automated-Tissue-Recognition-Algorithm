@@ -25,7 +25,7 @@ WorkingDirection/
 ├────logs/
 │    └────inference/
 ├────config.py
-├────data_preprocessing_60.py
+├────data_preprocessing.py
 ├────inference.py
 ├────train.py
 ├────trainer.py
@@ -36,14 +36,14 @@ WorkingDirection/
 ## Step 3: Inference
 Using the checkpoints we provided to reproduce our result. Run the command:
 ```
-python inference.py --gpu 0 --stage 2 
+python inference.py --stage 2 --num_classes 6 --model densenet121 --pretrained True
 ```
 It will automatically print the confusion matrix, metrics, and AUC score, etc.  
 If you want to reproduce the result in the first layer or the second layer, run the command:
 ```
-python inference.py --gpu 0 --stage 0 --num_classes 3
-python inference.py --gpu 0 --stage 1 --num_classes 3
-python inference.py --gpu 0 --stage 1 --num_classes 2
+python inference.py --stage 0 --num_classes 3 --model densenet121 --pretrained True
+python inference.py --stage 1 --num_classes 3 --model densenet121 --pretrained True
+python inference.py --stage 1 --num_classes 2 --model densenet121 --pretrained True
 ```
 
 ## Step 4 (Optional): Train
@@ -55,7 +55,7 @@ python train.py --gpu 0 --stage 1 --num_classes 2  --model densenet121 --pretrai
 ```
 Then run the inference:
 ```
-python inference.py --gpu 0 --stage 2 
+python inference.py --stage 2 --num_classes 6 --model densenet121 --pretrained True
 ```
 ## Contact to us
 If you have any problem to this repository, please send an issue or e-mail us: xiangyw99@outlook.com.
