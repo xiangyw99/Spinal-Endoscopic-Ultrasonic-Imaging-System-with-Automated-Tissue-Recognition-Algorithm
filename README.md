@@ -29,7 +29,13 @@ WorkingDirection/
 ## Step 3: Inference
 Using the trained weights to reproduce our result. Run the command:
 ```
-python inference.py --stage 2 --gpu 0 --model densenet121
+python inference.py --gpu 0 --stage 2 
+```
+If you want to reproduce the result in the first stage or the second stage, run the command:
+```
+python inference.py --gpu 0 --stage 0 --num_classes 3
+python inference.py --gpu 0 --stage 1 --num_classes 3
+python inference.py --gpu 0 --stage 1 --num_classes 2
 ```
 
 ## Step 4 (Optional): Train
@@ -41,5 +47,5 @@ python train.py --gpu 0 --stage 1 --num_classes 2 --imagesTr $YOUR DATASET ROOT$
 ```
 Then run the inference root:
 ```
-python inference.py --stage 2 --gpu 0 --model densenet121
+python inference.py --gpu 0 --stage 2 
 ```
