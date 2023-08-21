@@ -1,5 +1,5 @@
 # Spinal-Endoscopic-Ultrasonic-Imaging-System-with-Automated-Tissue-Recognition-Algorithm
-Official PyTorch implementation for paper: Spinal Endoscopic Ultrasonic Imaging System with Automated Tissue Recognition Algorithm: Development and Optimization
+Official PyTorch implementation for paper: **Spinal Endoscopic Ultrasonic Imaging System with Automated Tissue Recognition Algorithm: Development and Optimization**
 
 Follow the steps below to reproduce our result.
 ## Step 1: Setup
@@ -14,41 +14,7 @@ Prepare the dataset (Download) and the model weights (Download) in the folder. M
 ```
 WorkingDirection/
 ├────checkpoints/
-│    ├────stage_0/
-│    │    └────classes_3/
-│    │    │    ├────fold_0/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    │    │    ├────fold_1/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    │    │    ├────fold_2/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    │    │    ├────fold_3/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    │    │    └────fold_4/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    ├────stage_1/
-│    │    ├────classes_2/
-│    │    │    ├────fold_0/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    │    │    ├────fold_1/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    │    │    ├────fold_2/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    │    │    ├────fold_3/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    │    │    └────fold_4/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    │    └────classes_3/
-│    │    │    ├────fold_0/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    │    │    ├────fold_1/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    │    │    ├────fold_2/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    │    │    ├────fold_3/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
-│    │    │    └────fold_4/
-│    │    │    │    └────checkpoint_best_densenet121_pretrained_True.pt
+├────datasets/
 ├────logs/
 │    └────inference/
 ├────config.py
