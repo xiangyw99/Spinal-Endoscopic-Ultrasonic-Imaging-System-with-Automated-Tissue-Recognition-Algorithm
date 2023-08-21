@@ -5,12 +5,12 @@ Follow the steps below to reproduce our result.
 ## Step 1: Setup
 Run the following commands to create a conda environment. Make sure you are running on a linux system with one GPU.
 ```
-conda create -n bmu python=3.10
+conda create --name bmu --file requirements.txt
 conda activate bmu
-pip install -r requirements.txt
 ```
 ## Step 2: Preparing Dataset and Checkpoints
 Prepare the dataset (BaiduDisk) and the Checkpoints (BaiduDisk). Put the WHOLE dataset/checkpoints folder into your working directory.  
+Then go into `config.py`, change `imagesTr` and `model_path` to the path of dataset/checkpoints on your computer.  
 Make sure your folder looks like:
 ```
 WorkingDirection/
@@ -21,9 +21,7 @@ WorkingDirection/
 │    │    ├────classes_2/
 │    │    └────classes_3/
 ├────datasets/
-│    ├────spine_image_5_fold/
-│    ├────spine_image_5_fold_stage2_class2/
-│    └────spine_image_5_fold_stage2_class3/
+│    ├────spine_image_0529_strict_split/
 ├────logs/
 │    └────inference/
 ├────config.py
