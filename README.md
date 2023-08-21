@@ -32,7 +32,7 @@ WorkingDirection/
 ├────trainer.py
 └────utils.py
 ```
-3. Go into `config.py`, change `imagesTr` and `model_path` to the path of dataset/checkpoints on your computer.  
+4. Go into `config.py`, change `imagesTr` and `model_path` to the path of dataset/checkpoints on your computer.  
 
 ## Step 3: Inference
 Using the checkpoints we provided to reproduce our result. Run the command:
