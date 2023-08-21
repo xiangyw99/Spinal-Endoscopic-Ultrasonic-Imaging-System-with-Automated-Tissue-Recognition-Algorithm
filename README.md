@@ -11,6 +11,7 @@ conda activate bmu
 ## Step 2: Dataset and Checkpoints
 1. Download the dataset and the Checkpoints ([BaiduDisk](https://pan.baidu.com/s/1_DyzJzcJ7ASiZIz0n1WvlQ?pwd=h4r8), Password: h4r8).
 2. Unzip `datasets.zip` and put the WHOLE dataset/checkpoints folder into your working directory.
+3. Create an empty folder `logs/inference/`
 Make sure your folder looks like:
 ```
 WorkingDirection/
