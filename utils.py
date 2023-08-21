@@ -1,15 +1,9 @@
 import cv2
 import numpy as np
-import torch
 from glob import glob
-import matplotlib.pyplot as plt
-import timm
-from torchsummary import summary
 from sklearn.model_selection import StratifiedKFold
-import os
 import numpy as np
-import timm
-from sklearn.model_selection import KFold, StratifiedKFold
+from sklearn.model_selection import StratifiedKFold
 
 def threshold_at_one(x):
     return x>75
@@ -17,6 +11,7 @@ def threshold_at_one(x):
 def jpg_to_ndarray(path):
     image=cv2.imread(path, cv2.IMREAD_GRAYSCALE)
     return image
+
 def label_to_onehot(label, num_classes):
     a=label
     one_hot_a=np.zeros((num_classes,))
