@@ -58,4 +58,4 @@ Then run the inference:
 python inference.py --gpu 0 --stage 2 
 ```
 ## Contact to us
-If you have any problem/bug to this repository, please send an issue or e-mail us: xiangyw99@outlook.com.
+If you have any problem to this repository, please send an issue or e-mail us: xiangyw99@outlook.com.
