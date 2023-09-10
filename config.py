@@ -4,8 +4,8 @@ class CFG:
     output_dir  = './logs/'
 
     # model and save model
-    experiment  = 'resnet50'
-    model       = 'resnet34'
+    experiment  = 'densenet121'
+    model       = 'densenet121'
     pretrained  = True
 
     # training
