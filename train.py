@@ -119,14 +119,8 @@ logger.info("Begin to train the model: {} , Pretrained: {}".format(args.model,  
 
 os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 
-# dataset and dataloader
-#dataset=ABUSsetNew(args.imagesTr, mode='train')
-# val_set=ABUSset(args.imagesTs, mode='train', postfix='.jpg')   ################### important!!! this line the 'mode'==train for k-fold cross-validation
-
 kfold_val_acc=[]
-#kfold=KFold(shuffle=True, random_state=2023)
-#for fold,(train_ids, val_ids) in enumerate(kfold.split(dataset)):
-    # Print
+
 for fold in range(5):  
     
     logger.info('--------------------------------')
@@ -135,18 +129,15 @@ for fold in range(5):
     trainset=ABUSsetNew(args, fold=fold, mode='train')
     valset=ABUSsetNew(args, fold=fold, mode='val')
 
-    #train_subsampler = torch.utils.data.SubsetRandomSampler(train_ids)
-    #val_subsampler = torch.utils.data.SubsetRandomSampler(val_ids)
-    #train_loader=DataLoader(dataset, batch_size=args.batch_size,  pin_memory=True, num_workers=4, sampler=train_subsampler)
-    #val_loader=DataLoader(dataset, batch_size=args.batch_size,  num_workers=4, sampler=val_subsampler)
-
     train_loader=DataLoader(trainset, shuffle=True,batch_size=args.batch_size,  pin_memory=True, num_workers=4)
     val_loader=DataLoader(valset, shuffle=True,batch_size=args.batch_size,  num_workers=4)
 
     # model
-    
     model=timm.create_model(args.model, pretrained=args.pretrained, num_classes=args.num_classes).cuda()
-    logger.info("Training from scratch")
+    if args.pretrained:
+        logger.info("Training from pretrained weight")
+    else:
+        logger.info("Training from scratch")
 
     # loss, optimizer, scheduler
     if args.stage==0:
